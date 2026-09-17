@@ -81,6 +81,7 @@
     <nav>
       <a href="#specializations">Specializations</a>
       <a href="#ventures">Ventures</a>
+      <a href="#products">Products</a>
       <a href="#record">Record</a>
       <a href="#principles">Principles</a>
     </nav>
@@ -137,6 +138,14 @@
   </div>
 </section>
 
+<section id="products" class="wrap">
+  <div class="section-head">
+    <h2>Products &amp; releases.</h2>
+    <p>Every confirmed product, codebase, and release, published by Tariq Chehardy LLC. This index updates itself.</p>
+  </div>
+  <div class="ventures" id="product-list"></div>
+</section>
+
 <section id="record" class="wrap">
   <div class="section-head">
     <h2>Official record.</h2>
@@ -180,5 +189,38 @@
   <div>Official site · Hosted on GitHub Pages</div>
 </footer>
 
+<script>
+(function () {
+  var list = document.getElementById("product-list");
+  fetch("products.json", { cache: "no-store" })
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+    .then(function (data) {
+      var items = (data.products || []).map(function (p) {
+        var initials = p.name.replace(/[^a-zA-Z]/g, "").slice(0, 2).toUpperCase() || "TC";
+        var release = p.release
+          ? '<span class="v-tag">Latest: ' + escapeHtml(p.release.tag) + " &middot; " + (p.release.published || "") + "</span>"
+          : '<span class="v-tag">Code &middot; updated ' + (p.pushed || "—") + "</span>";
+        return '<div class="v-row">' +
+          '<div class="vm">' + initials + "</div>" +
+          '<div><h3>' + (p.url ? '<a href="' + p.url + '">' + escapeHtml(p.name) + "</a>" : escapeHtml(p.name)) + "</h3>" +
+          "<p>" + escapeHtml(p.description || "") + "</p></div>" +
+          release + "</div>";
+      });
+      if (!items.length) {
+        list.innerHTML = '<p style="color:#6e6e73;font-size:15px">New products and releases publish here automatically as they are confirmed.</p>';
+      } else {
+        list.innerHTML = items.join("");
+      }
+    })
+    .catch(function () {
+      list.innerHTML = '<p style="color:#6e6e73;font-size:15px">Product index is updating. Refresh shortly.</p>';
+    });
+  function escapeHtml(s) {
+    return s.replace(/[&<>"']/g, function (ch) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch];
+    });
+  }
+})();
+</script>
 </body>
 </html>
