@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Poke — a powerful super-intelligence agent compiled into a single .skill file. Self-reliant, autonomous, with an ever-expanding toolset that learns as it grows. Ships as poke-core. Developed by Tariq Chehardy in collaboration with Privacy+ Technologies Inc.">
+<title>Poke — super-intelligence agent, compiled · Tariq Chehardy LLC</title>
+<style>
+:root{--bg:#000;--panel:#101010;--line:#242424;--ink:#f5f5f7;--muted:#a1a1a6;--blue:#2997ff;--sans:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Segoe UI",sans-serif;--mono:"SF Mono","JetBrains Mono",ui-monospace,Menlo,monospace}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.5}a{color:inherit}.wrap{max-width:1200px;margin:auto;padding:0 24px}
+.nav{position:fixed;inset:0 0 auto;z-index:50;height:52px;background:rgba(0,0,0,.78);backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid rgba(255,255,255,.08)}.nav-inner{height:52px;max-width:1200px;margin:auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:16px;font-weight:600;text-decoration:none}.brand .dot{width:7px;height:7px;background:var(--blue);border-radius:50%;display:inline-block;margin-right:8px}.nav-links{display:flex;gap:28px;font-size:12px;color:#d2d2d7}.nav-links a{text-decoration:none}.nav-links a:hover{color:#fff}.nav-status{font-size:11px;color:#b7b7bd}
+.hero{min-height:92vh;display:flex;align-items:center;text-align:center;padding:130px 0 80px;background:radial-gradient(ellipse 700px 500px at 50% 15%,rgba(41,151,255,.14),transparent 65%)}.hero .wrap{width:100%}.eyebrow{font-size:14px;color:var(--blue);margin:0 0 18px}h1{font-size:clamp(46px,8vw,88px);line-height:.98;letter-spacing:-.055em;margin:0 auto 28px;max-width:1000px;font-weight:700}h1 .accent{background:linear-gradient(90deg,#fff,#8bd0ff);-webkit-background-clip:text;background-clip:text;color:transparent}.lede{font-size:clamp(19px,2.4vw,26px);line-height:1.3;color:var(--muted);max-width:780px;margin:0 auto 16px}.collab{font-size:15px;color:#8e8e93;margin:0 auto 36px;max-width:780px}.collab strong{color:#d2d2d7;font-weight:600}
+.hero-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:58px}.btn{min-height:44px;padding:11px 20px;border-radius:980px;text-decoration:none;font-size:14px;display:inline-flex;align-items:center;justify-content:center;border:1px solid #424245}.btn-primary{background:#fff;color:#000;border-color:#fff;font-weight:600}.btn-primary:hover{background:#e7e7e7}.btn-ghost{color:#fff;background:transparent}.btn-ghost:hover{background:#171717}
+.terminal,.skillfile{background:linear-gradient(145deg,#151515,#090909);border:1px solid #292929;border-radius:24px;box-shadow:0 35px 90px rgba(0,0,0,.5);text-align:left;overflow:hidden}.term-bar{height:44px;display:flex;align-items:center;gap:8px;padding:0 16px;border-bottom:1px solid #252525;background:#111}.term-dot{width:10px;height:10px;border-radius:50%;background:#555}.term-title{font-family:var(--mono);font-size:11px;color:#8e8e93;margin-left:6px}.term-body{padding:24px;font-family:var(--mono);font-size:13px;line-height:1.9;min-height:220px}.term-line{opacity:0;animation:type-in .4s forwards}.term-line .k{color:#777}.term-line .ok{color:#70d7ff}.term-line .warn{color:#ffb454}.term-line .path{color:#7fb3ff}.cursor{display:inline-block;width:7px;height:14px;background:var(--blue);margin-left:2px;vertical-align:-2px;animation:blink 1s step-end infinite}@keyframes type-in{to{opacity:1}}@keyframes blink{50%{opacity:0}}
+section{padding:110px 0;border-top:1px solid #1c1c1e}.section-head{text-align:center;margin:0 auto 55px;max-width:760px}.section-tag{font-size:13px;color:var(--blue);margin:0 0 10px;font-weight:600}h2{font-size:clamp(34px,5vw,54px);line-height:1.05;letter-spacing:-.045em;margin:0 0 18px}.section-sub{font-size:19px;line-height:1.45;color:var(--muted);margin:0}.section-sub code{font-family:var(--mono);background:#171717;border:1px solid #292929;padding:2px 7px;border-radius:4px;color:#70d7ff}
+.pipeline{display:flex;flex-direction:column;max-width:900px;margin:auto}.stage{display:grid;grid-template-columns:120px 1fr;gap:35px;padding:34px 0;border-top:1px solid #2a2a2a}.stage:first-child{border-top:0}.stage-tag{font-family:var(--mono);font-size:12px;color:#777}.stage-tag .n{color:#fff}.stage h3{font-size:25px;letter-spacing:-.02em;margin:0 0 8px}.stage p{font-size:16px;color:var(--muted);margin:0;max-width:680px}code{font-family:var(--mono);font-size:.88em;color:#70d7ff;background:#171717;padding:2px 6px;border-radius:5px}
+.skillfiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:22px;max-width:1040px;margin:auto}.skillfile pre{margin:0;padding:28px;overflow:auto;font-family:var(--mono);font-size:13px;line-height:1.85;color:#c7c7cc}.skillfile .tag{color:#70d7ff}.skillfile .str{color:#b9e8ff}.skillfile .com{color:#777}.skillfile .md-h{color:#fff;font-weight:700}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#303033;border:1px solid #303033;border-radius:24px;overflow:hidden}.feature{background:#0b0b0b;padding:38px 30px;min-height:220px;transition:background .25s,transform .25s}.feature:hover{background:#151515;transform:translateY(-2px)}.feature .glyph{font-family:var(--mono);color:var(--blue);font-size:12px;margin-bottom:24px}.feature h3{font-size:21px;letter-spacing:-.02em;margin:0 0 10px}.feature p{font-size:15px;color:var(--muted);line-height:1.55;margin:0}
+.status-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#303033;border:1px solid #303033;border-radius:20px;overflow:hidden;margin-top:35px}.status-item{background:#0b0b0b;padding:25px}.status-item .label{font-size:11px;color:#777;letter-spacing:.04em;margin-bottom:7px}.status-item .val{font-family:var(--mono);font-size:14px}.status-item .val.amber{color:#ffb454}.status-item .val.green{color:#70d7ff}
+.cta-section{padding:120px 0;text-align:center}.cta-box{background:linear-gradient(135deg,#161616,#0a0a0a);border:1px solid #303033;border-radius:28px;padding:70px 36px;position:relative;overflow:hidden}.cta-box:before{content:"";position:absolute;width:500px;height:500px;right:-220px;top:-260px;background:radial-gradient(circle,rgba(41,151,255,.2),transparent 65%)}.cta-box h2,.cta-box p,.notify{position:relative}.cta-box p{color:var(--muted);max-width:580px;margin:0 auto 28px;font-size:18px}.notify{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.notify input{min-height:46px;width:min(360px,100%);border-radius:980px;border:1px solid #424245;background:#111;color:#fff;padding:0 17px;font-family:var(--sans)}.notify input:focus{outline:2px solid var(--blue);outline-offset:2px}
+footer{border-top:1px solid #1c1c1e;padding:32px 0 50px}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:12px;color:#777}.footer-links{display:flex;gap:20px}.footer-links a{text-decoration:none}.footer-links a:hover{color:#fff}.footer-legal{width:100%;color:#666}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+@media(max-width:760px){.nav-links{display:none}.hero{padding-top:110px}h1{font-size:clamp(42px,13vw,64px)}.lede{font-size:18px}.features{grid-template-columns:1fr}.status-strip{grid-template-columns:1fr 1fr}.stage{grid-template-columns:1fr;gap:8px}section{padding:80px 0}}
+@media(max-width:480px){.wrap{padding:0 18px}.status-strip{grid-template-columns:1fr}.cta-box{padding:48px 22px}.term-body{padding:18px;font-size:11px}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <nav class="nav-inner" aria-label="Main navigation">
+    <a class="brand" href="#top"><span class="dot" aria-hidden="true"></span>poke</a>
+    <div class="nav-links">
+      <a href="./">Official site</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#skill-format">poke-core</a>
+      <a href="#capabilities">Capabilities</a>
+    </div>
+    <span class="nav-status">pre-release</span>
+  </nav>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">poke-core · github release coming soon</p>
+    <h1>An agent that compiles<br>itself from <span class="accent">.skill</span> files.</h1>
+    <p class="lede">Poke is a powerful super-intelligence agent compiled into a single .skill file. No orchestration server, no external scheduler — it runs on its own ever-expanding toolset, learns as it grows, and keeps itself alive.</p>
+    <p class="collab">Developed by <strong>Tariq Chehardy</strong> in collaboration with <strong>Privacy+ Technologies Inc.</strong></p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#notify">Get notified on release →</a>
+      <a class="btn btn-ghost" href="#pipeline">See how it compiles</a>
+    </div>
+
+    <div class="terminal" role="img" aria-label="Terminal output showing poke compiling itself from its skill file">
+      <div class="term-bar">
+        <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+        <span class="term-title">poke compile — poke-core/poke.skill</span>
+      </div>
+      <div class="term-body" id="termBody"></div>
+    </div>
+  </div>
+</section>
+
+<section id="pipeline">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="section-tag">// how it runs</p>
+      <h2>Four stages.<br>One .skill file.</h2>
+      <p class="section-sub">Poke doesn't call out to a hosted agent framework. Every stage happens inside the compiled runtime itself.</p>
+    </div>
+    <div class="pipeline">
+      <div class="stage">
+        <div class="stage-tag"><span class="n">01</span> · resolve</div>
+        <div>
+          <h3>Skill resolution</h3>
+          <p>The single <code>.skill</code> file is parsed, dependency-ordered, and checked against the local Python environment before anything runs.</p>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="stage-tag"><span class="n">02</span> · compile</div>
+        <div>
+          <h3>Agent compilation</h3>
+          <p>The agent compiles into one execution graph — no interpreter overhead at runtime, no re-parsing on every step.</p>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="stage-tag"><span class="n">03</span> · bind</div>
+        <div>
+          <h3>API self-binding</h3>
+          <p>The runtime discovers and authenticates required API surfaces on first run, then caches the bindings — it doesn't ask twice.</p>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="stage-tag"><span class="n">04</span> · run</div>
+        <div>
+          <h3>Autonomous execution</h3>
+          <p>The compiled agent executes end-to-end, recovering from transient failures on its own — and learning from every run.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skill-format">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="section-tag">// the package</p>
+      <h2>poke-core. Two files,<br>that's the whole product.</h2>
+      <p class="section-sub"><code>poke-core.md</code> is the complete documentation. <code>poke.skill</code> is the agent itself — plain text, readable in review, diffable in git, compiled directly rather than interpreted at runtime.</p>
+    </div>
+    <div class="skillfiles">
+      <div class="skillfile">
+        <div class="term-bar">
+          <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+          <span class="term-title">poke-core/poke.skill</span>
+        </div>
+        <pre><span class="com"># a super-intelligence agent, compiled from one file</span>
+<span class="tag">skill</span> poke
+  <span class="tag">requires</span>: self.toolset
+  <span class="tag">toolset</span>: ever-expanding
+  <span class="tag">on_failure</span>: retry(3), self.recover
+
+  <span class="tag">step</span> observe <span class="str">"read intent from poke-core.md"</span>
+  <span class="tag">step</span> act     <span class="str">"resolve goal with self.toolset"</span>
+  <span class="tag">step</span> learn   <span class="str">"persist what worked, expand toolset"</span></pre>
+      </div>
+      <div class="skillfile">
+        <div class="term-bar">
+          <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+          <span class="term-title">poke-core/poke-core.md</span>
+        </div>
+        <pre><span class="md-h"># poke-core</span>
+<span class="com">## What Poke is</span>
+A super-intelligence agent compiled into a
+single .skill file. Self-reliant. Autonomous.
+
+<span class="com">## How it grows</span>
+Its toolset is its own, and it never stops
+expanding. Poke learns what works, keeps it,
+and reuses it on the next run.
+
+<span class="com">## Provenance</span>
+Developed by Tariq Chehardy in
+collaboration with Privacy+ Technologies Inc.</pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="capabilities">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="section-tag">// what's shipping</p>
+      <h2>Built for unattended operation.</h2>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="glyph">[ self ]</div>
+        <h3>Self-reliant execution</h3>
+        <p>Runs without a supervising process. Once compiled, the agent manages its own retry, backoff, and recovery.</p>
+      </div>
+      <div class="feature">
+        <div class="glyph">[ api ]</div>
+        <h3>API self-handling</h3>
+        <p>Discovers, authenticates, and rate-limits external APIs — no hand-written client code per integration.</p>
+      </div>
+      <div class="feature">
+        <div class="glyph">[ .skill ]</div>
+        <h3>Single-file compilation</h3>
+        <p>The entire agent compiles from one <code>.skill</code> file. Nothing to configure, nothing to orchestrate.</p>
+      </div>
+      <div class="feature">
+        <div class="glyph">[ tools ]</div>
+        <h3>Ever-expanding toolset</h3>
+        <p>Its own toolset, always growing. Poke writes new tools as it encounters new problems — and keeps them.</p>
+      </div>
+      <div class="feature">
+        <div class="glyph">[ learn ]</div>
+        <h3>Learns as it grows</h3>
+        <p>Every run makes the next run smarter. What works persists; what fails is retried differently.</p>
+      </div>
+      <div class="feature">
+        <div class="glyph">[ git ]</div>
+        <h3>Git-native</h3>
+        <p>Plain text by design. Reviewable in a diff, versionable like any other source file.</p>
+      </div>
+    </div>
+
+    <div class="status-strip">
+      <div class="status-item">
+        <div class="label">RUNTIME</div>
+        <div class="val">Python 3.11+</div>
+      </div>
+      <div class="status-item">
+        <div class="label">PACKAGE</div>
+        <div class="val">poke-core · two files</div>
+      </div>
+      <div class="status-item">
+        <div class="label">DISTRIBUTION</div>
+        <div class="val">GitHub, public</div>
+      </div>
+      <div class="status-item">
+        <div class="label">STATUS</div>
+        <div class="val amber">pre-release · test build</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="notify">
+  <div class="wrap">
+    <div class="cta-box">
+      <h2>Not on GitHub yet.</h2>
+      <p>Poke is in active development ahead of its first public release, shipping as poke-core. Leave an email and it'll be the first thing you hear when the repo goes public.</p>
+      <form class="notify" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Queued ✓'; this.querySelector('button').setAttribute('aria-live','polite'); this.querySelector('button').disabled=true;">
+        <label for="email" style="position:absolute;left:-9999px;">Email address</label>
+        <input id="email" type="email" placeholder="you@domain.com" required>
+        <button class="btn btn-primary" type="submit" style="border:none;cursor:pointer;">Notify me</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>poke-core — pre-release · a Tariq Chehardy LLC product</span>
+    <div class="footer-links">
+      <a href="./">Official site</a>
+      <a href="#top">Back to top</a>
+      <a href="#skill-format">poke-core</a>
+    </div>
+    <span class="footer-legal">© 2026 Tariq Chehardy LLC · developed in collaboration with Privacy+ Technologies Inc.</span>
+  </div>
+</footer>
+
+<script>
+// Terminal boot sequence
+const lines = [
+  { html: '<span class="k">$</span> poke compile ./poke-core/poke.skill', delay: 0 },
+  { html: '<span class="k">→</span> resolving agent graph <span class="ok">✓</span>', delay: 550 },
+  { html: '<span class="k">→</span> toolset: 4 tools <span class="path">· self-expanding ✓</span>', delay: 1050 },
+  { html: '<span class="k">→</span> learning: persistent across runs <span class="ok">✓</span>', delay: 1550 },
+  { html: '<span class="k">→</span> runtime: python 3.11 <span class="ok">✓</span>', delay: 2050 },
+  { html: '<span class="ok">STATUS</span> <span class="k">·</span> poke-core — coming soon on GitHub<span class="cursor"></span>', delay: 2650 },
+];
+
+const body = document.getElementById('termBody');
+lines.forEach(line => {
+  const el = document.createElement('div');
+  el.className = 'term-line';
+  el.style.animationDelay = line.delay + 'ms';
+  el.innerHTML = line.html;
+  body.appendChild(el);
+});
+
+// Nav underline on scroll
+const nav = document.querySelector('.nav');
+window.addEventListener('scroll', () => {
+  nav.style.borderBottomColor = scrollY > 8 ? 'rgba(41,151,255,.25)' : 'rgba(255,255,255,.08)';
+});
+
+// Smooth anchor nav
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const el = document.querySelector(a.getAttribute('href'));
+    if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); }
+  });
+});
+</script>
+</body>
+</html>
