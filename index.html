@@ -3,8 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tariq Chehardy LLC — Absolute Precision</title>
-<meta name="description" content="Tariq Chehardy LLC. Senior expert-level software: custom code, commissioned programming, reverse engineering, and PowerShell production work. Commercial inquiries only.">
+<title>Tariq Chehardy LLC · Absolute Precision</title>
+<meta name="description" content="Tariq Chehardy LLC. Senior expert-level software: custom code, custom scripts, commissioned programming, reverse engineering, PowerShell & internal production, and design. Commercial inquiries only.">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="Tariq Chehardy LLC · Absolute Precision">
+<meta property="og:description" content="Senior expert-level software: custom code, custom scripts, commissioned programming, reverse engineering, and PowerShell & internal production.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tariqchehardy.github.io/tariq-chehardy-llc/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='43' font-family='-apple-system,system-ui,sans-serif' font-size='26' font-weight='700' fill='%23fff' text-anchor='middle'%3ETC%3C/text%3E%3C/svg%3E">
 <style>
   :root{
     --bg:#ffffff; --bg-soft:#f5f5f7; --ink:#1d1d1f; --muted:#6e6e73;
@@ -16,7 +23,13 @@
   a{color:inherit;text-decoration:none}
   .wrap{max-width:980px;margin:0 auto;padding:0 24px}
 
-  header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.72);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line)}
+  header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line)}
+  .skip{position:absolute;left:-9999px}
+  .skip:focus{left:16px;top:12px;z-index:99;background:#fff;padding:8px 14px;border-radius:8px;box-shadow:0 2px 14px rgba(0,0,0,.14);font-size:14px}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+  .reveal{opacity:0;transform:translateY(12px);transition:opacity .55s ease,transform .55s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}}
   .nav{display:flex;align-items:center;justify-content:space-between;height:56px;font-size:14px}
   .brand{display:flex;align-items:center;gap:10px;font-weight:600}
   .mono{width:28px;height:28px;border-radius:7px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;letter-spacing:.02em}
@@ -45,7 +58,9 @@
   .cell .no{font-size:12px;font-weight:600;color:var(--accent);letter-spacing:.1em;margin-bottom:14px;display:block}
 
   .ventures{margin-top:48px}
-  .v-row{display:flex;align-items:center;gap:22px;padding:26px 6px;border-top:1px solid var(--line)}
+  .v-row{display:flex;align-items:center;gap:22px;padding:26px 6px;border-top:1px solid var(--line);transition:background .2s}
+  .v-row:hover{background:var(--bg-soft)}
+  .v-row h3 a:hover{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
   .v-row:last-child{border-bottom:1px solid var(--line)}
   .vm{width:44px;height:44px;border-radius:11px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex:none}
   .v-row h3{font-size:17px;font-weight:600}
@@ -74,6 +89,7 @@
 </style>
 </head>
 <body>
+<a class="skip" href="#top">Skip to content</a>
 
 <header>
   <div class="wrap nav">
@@ -92,7 +108,7 @@
 <div class="hero wrap" id="top">
   <div class="eyebrow">Tariq Chehardy LLC</div>
   <h1>Absolute precision.<br>Built to production.</h1>
-  <p><b>Senior expert-level software.</b> Custom code, custom scripts, commissioned programming, and reverse engineering — engineered to production standard from the first line.</p>
+  <p><b>Senior expert-level software.</b> Custom code, custom scripts, commissioned programming, and reverse engineering: engineered to production standard from the first line.</p>
   <div class="hero-links">
     <a href="#specializations">What we do &rsaquo;</a>
     <a href="#ventures">Ventures &rsaquo;</a>
@@ -102,13 +118,13 @@
 <section id="specializations" class="wrap">
   <div class="section-head">
     <h2>Specializations.</h2>
-    <p>Primary optimized. Every engagement ships at senior expert level — no hand-offs, no padding.</p>
+    <p>Primary optimized. Every engagement ships at senior expert level: no hand-offs, no padding.</p>
   </div>
   <div class="grid">
     <div class="cell"><span class="no">01</span><h3>Custom Code</h3><p>Production-grade software, built to spec. Clean internals, zero shortcuts, engineered to last.</p></div>
-    <div class="cell"><span class="no">02</span><h3>Custom Scripts</h3><p>Purpose-built automation and tooling that does exactly one thing — flawlessly.</p></div>
+    <div class="cell"><span class="no">02</span><h3>Custom Scripts</h3><p>Purpose-built automation and tooling that does exactly one thing, flawlessly.</p></div>
     <div class="cell"><span class="no">03</span><h3>Commissioned Programming</h3><p>Client-commissioned engineering, delivered end to end. Absolute precision, on the spec, on schedule.</p></div>
-    <div class="cell"><span class="no">04</span><h3>Reverse Engineering</h3><p>Deep program-internal analysis. Understanding systems from the inside out — then making them better.</p></div>
+    <div class="cell"><span class="no">04</span><h3>Reverse Engineering</h3><p>Deep program-internal analysis. Understanding systems from the inside out, then making them better.</p></div>
     <div class="cell"><span class="no">05</span><h3>PowerShell &amp; Internal Production</h3><p>Windows internals and production tooling, carried from prototype stage to internal production.</p></div>
     <div class="cell"><span class="no">06</span><h3>Design</h3><p>Modern, minimal interface and product design. Every detail deliberate, nothing decorative.</p></div>
   </div>
@@ -122,12 +138,12 @@
   <div class="ventures">
     <div class="v-row">
       <div class="vm">PK</div>
-      <div><h3><a href="poke.html">Poke</a></h3><p>A super-intelligence agent compiled into a single .skill file — self-reliant, autonomous, with an ever-expanding toolset that learns as it grows. Developed in collaboration with Privacy+ Technologies Inc.</p></div>
+      <div><h3><a href="poke.html">Poke</a></h3><p>A super-intelligence agent compiled into a single .skill file: self-reliant, autonomous, with an ever-expanding toolset that learns as it grows. Developed in collaboration with Privacy+ Technologies Inc.</p></div>
       <div class="v-tag">Agent runtime · poke-core</div>
     </div>
     <div class="v-row">
       <div class="vm">SW</div>
-      <div><h3>Sovereign Workstation</h3><p>Ephemeral, hardened cloud workstations — fully provisioned in minutes, gone when you're done.</p></div>
+      <div><h3>Sovereign Workstation</h3><p>Ephemeral, hardened cloud workstations: fully provisioned in minutes, gone when you're done.</p></div>
       <div class="v-tag">Infrastructure</div>
     </div>
     <div class="v-row">
@@ -154,11 +170,11 @@
 <section id="record" class="wrap">
   <div class="section-head">
     <h2>Official record.</h2>
-    <p>This site is the official public record of Tariq Chehardy LLC — company and personal public records, published and hosted right here.</p>
+    <p>This site is the official public record of Tariq Chehardy LLC: company and personal public records, published and hosted right here.</p>
   </div>
   <div class="record">
     <div class="r-row"><span>Legal name</span><span>Tariq Chehardy LLC</span></div>
-    <div class="r-row"><span>Entity type</span><span>Limited Liability Company — private, founder-led</span></div>
+    <div class="r-row"><span>Entity type</span><span>Limited Liability Company · private, founder-led</span></div>
     <div class="r-row"><span>Founder</span><span>Tariq Chehardy</span></div>
     <div class="r-row"><span>Focus</span><span>Custom code · Commissioned programming · Reverse engineering</span></div>
     <div class="r-row"><span>Official site</span><span>Hosted on GitHub Pages</span></div>
@@ -174,7 +190,7 @@
   </div>
   <div class="principles">
     <div><b>Precision first</b><span>Absolute precision in every build, script, and line of code. Close enough is not.</span></div>
-    <div><b>Production, not prototypes</b><span>Internal work is carried to production standard — even at prototype stage.</span></div>
+    <div><b>Production, not prototypes</b><span>Internal work is carried to production standard, even at prototype stage.</span></div>
     <div><b>Minimal by design</b><span>Modern, minimal, deliberate. Nothing ships that doesn't earn its place.</span></div>
     <div><b>Discretion</b><span>Commissioned work stays commissioned. Client systems stay client systems.</span></div>
   </div>
@@ -183,7 +199,7 @@
 <section id="contact" class="wrap">
   <div class="contact">
     <h2>Commercial inquiries only.</h2>
-    <p>DMs are closed. For commissioned work, partnerships, and business — reach us on GitHub.</p>
+    <p>DMs are closed. For commissioned work, partnerships, and business: reach us on GitHub.</p>
     <a class="btn" href="https://github.com/tariqchehardy">Contact on GitHub</a>
     <p class="policy">Tariq Chehardy LLC does not accept unsolicited direct messages.</p>
   </div>
@@ -197,6 +213,7 @@
 <script>
 (function () {
   var list = document.getElementById("product-list");
+  list.innerHTML = '<p style="color:#6e6e73;font-size:15px">Loading index…</p>';
   fetch("products.json", { cache: "no-store" })
     .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
     .then(function (data) {
@@ -204,7 +221,7 @@
         var initials = p.name.replace(/[^a-zA-Z]/g, "").slice(0, 2).toUpperCase() || "TC";
         var release = p.release
           ? '<span class="v-tag">Latest: ' + escapeHtml(p.release.tag) + " &middot; " + (p.release.published || "") + "</span>"
-          : '<span class="v-tag">Code &middot; updated ' + (p.pushed || "—") + "</span>";
+          : '<span class="v-tag">Code &middot; updated ' + (p.pushed || "·") + "</span>";
         return '<div class="v-row">' +
           '<div class="vm">' + initials + "</div>" +
           '<div><h3>' + (p.url ? '<a href="' + p.url + '">' + escapeHtml(p.name) + "</a>" : escapeHtml(p.name)) + "</h3>" +
@@ -220,6 +237,15 @@
     .catch(function () {
       list.innerHTML = '<p style="color:#6e6e73;font-size:15px">Product index is updating. Refresh shortly.</p>';
     });
+  document.querySelectorAll(".section-head, .grid, .ventures, .record, .principles, .contact").forEach(function (el) { el.classList.add("reveal"); });
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, { rootMargin: "0px 0px -8% 0px" });
+    document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
+  }
   function escapeHtml(s) {
     return s.replace(/[&<>"']/g, function (ch) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch];
