@@ -1,0 +1,50 @@
+# Update Product Index — official site automation for Tariq Chehardy LLC.
+# Runs daily and on demand: inventories every PUBLIC repo under the account
+# (skipping the ignore list in products.config.json), pulls each repo's latest
+# release, regenerates products.json, and commits if anything changed.
+# The official site renders products.json live — every new confirmed product
+# or code release appears automatically once its repo is public.
+name: Update Product Index
+
+on:
+  schedule:
+    - cron: "0 3 * * *" # daily, 03:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: product-index
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout site
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate products.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python update-products.py
+
+      - name: Commit if changed
+        run: |
+          if [[ -n "$(git status --porcelain products.json)" ]]; then
+            git config user.name  "product-index[bot]"
+            git config user.email "actions@github.com"
+            git add products.json
+            git commit -m "auto: refresh product index"
+            git push
+            echo "products.json updated and pushed."
+          else
+            echo "No changes — index is current."
+          fi
