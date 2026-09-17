@@ -59,14 +59,14 @@
   @keyframes loadslide{0%{transform:translateX(-100%)}100%{transform:translateX(350%)}}
   @media(prefers-reduced-motion:reduce){.loader-bar i{animation:none}}
   :root{
-    --bg:#ffffff; --bg-soft:#f5f5f7; --ink:#1d1d1f; --muted:#6e6e73;
+    --bg:#ffffff; --bg-soft:#f5f5f7; --ink:#1d1d1f; --muted:#6e6e73; --ink-2:#3a3a3e;
     --line:#d2d2d7; --accent:#0071e3;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",system-ui,sans-serif;line-height:1.5;letter-spacing:-0.011em}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",system-ui,sans-serif;font-size:17px;line-height:1.55;letter-spacing:-0.011em}
   a{color:inherit;text-decoration:none}
-  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 28px}
 
   header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line)}
   .skip{position:absolute;left:-9999px}
@@ -78,97 +78,106 @@
   .nav{display:flex;align-items:center;justify-content:space-between;height:56px;font-size:14px}
   .brand{display:flex;align-items:center;gap:10px;font-weight:600}
   .mono{width:28px;height:28px;border-radius:7px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;letter-spacing:.02em}
-  .nav nav{display:flex;gap:28px;color:var(--muted);font-size:13.5px}
+  .nav nav{display:flex;gap:24px;color:var(--muted);font-size:13.5px}
   .nav nav a:hover{color:var(--ink)}
-  .nav .cta{color:var(--accent);font-weight:500}
+  .nav .cta{color:var(--accent);font-weight:500;border:1.5px solid rgba(0,113,227,.5);border-radius:980px;padding:7px 15px;transition:background .2s}
+  .nav .cta:hover{background:rgba(0,113,227,.08)}
 
-  .hero{text-align:center;padding:120px 0 90px}
+  .hero{text-align:center;padding:96px 0 72px}
   .hero .eyebrow{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
-  h1{font-size:clamp(44px,8vw,80px);font-weight:700;letter-spacing:-.025em;line-height:1.05}
-  .hero p{color:var(--muted);font-size:clamp(19px,2.6vw,24px);letter-spacing:-.008em;max-width:640px;margin:22px auto 0;line-height:1.4}
+  h1{font-size:clamp(42px,7.5vw,76px);font-weight:700;letter-spacing:-.025em;line-height:1.05}
+  .hero p{color:var(--muted);font-size:clamp(18px,2.3vw,22px);letter-spacing:-.008em;max-width:700px;margin:22px auto 0;line-height:1.45}
   .hero p b{color:var(--ink);font-weight:600}
-  .hero-links{margin-top:34px;display:flex;gap:28px;justify-content:center;font-size:17px}
+  .hero-facts{margin-top:30px;display:flex;gap:8px;justify-content:center;align-items:center;flex-wrap:wrap;font-size:13.5px;color:var(--muted)}
+  .hero-facts i{font-style:normal;color:var(--line)}
+  .hero-links{margin-top:30px;display:flex;gap:28px;justify-content:center;font-size:17px}
   .hero-links a{color:var(--accent)}
   .hero-links a:hover{text-decoration:underline}
 
-  section{padding:90px 0;border-top:1px solid var(--line)}
-  h2{font-size:clamp(30px,5vw,44px);font-weight:700;letter-spacing:-.02em;line-height:1.1}
-  .section-head p{color:var(--muted);font-size:19px;margin-top:14px;max-width:560px;letter-spacing:-.005em}
+  section{padding:72px 0;border-top:1px solid var(--line)}
+  section[id]{scroll-margin-top:72px}
+  h2{font-size:clamp(28px,4.5vw,40px);font-weight:700;letter-spacing:-.02em;line-height:1.12}
+  .section-head{margin-bottom:44px}
+  .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+  .section-head p{color:var(--muted);font-size:18.5px;margin-top:14px;max-width:640px;letter-spacing:-.005em;line-height:1.5}
 
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:48px}
-  .cell{background:var(--bg-soft);border-radius:18px;padding:34px 30px;transition:transform .2s}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px}
+  .cell{background:var(--bg-soft);border-radius:16px;padding:28px 26px;transition:transform .2s}
   .cell:hover{transform:translateY(-2px)}
-  .cell h3{font-size:19px;font-weight:600;margin-bottom:8px;letter-spacing:-.01em}
-  .cell p{color:var(--muted);font-size:15px;line-height:1.55}
+  .cell h3{font-size:18px;font-weight:600;margin-bottom:8px;letter-spacing:-.01em}
+  .cell p{color:var(--muted);font-size:15.5px;line-height:1.6}
   .cell .no{font-size:12px;font-weight:600;color:var(--accent);letter-spacing:.1em;margin-bottom:14px;display:block}
 
-  .ventures{margin-top:48px}
-  .v-row{display:flex;align-items:center;gap:22px;padding:26px 6px;border-top:1px solid var(--line);transition:background .2s}
+  .profile-cols{display:grid;grid-template-columns:1fr 340px;gap:48px;align-items:start}
+  .prose{max-width:660px}
+  .prose p{color:var(--ink-2);font-size:17px;line-height:1.7;margin-bottom:22px}
+  .prose p:last-child{margin-bottom:0}
+  .prose b{color:var(--ink);font-weight:600}
+  .facts{background:var(--bg-soft);border-radius:16px;padding:28px 26px}
+  .facts-title{font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+
+  .r-row{display:flex;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+  .r-row:last-child{border-bottom:0}
+  .r-row span:first-child{color:var(--muted)}
+  .r-row span:last-child{font-weight:500;text-align:right}
+  .r-row a{color:var(--accent)}
+  .r-row a:hover{text-decoration:underline;text-underline-offset:3px}
+  .record{margin-top:44px;background:var(--bg-soft);border-radius:16px;padding:36px 34px}
+
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+  .stat{background:var(--bg-soft);border-radius:16px;padding:30px 24px;text-align:center}
+  .stat b{display:block;font-size:40px;font-weight:700;letter-spacing:-.02em}
+  .stat span{color:var(--muted);font-size:13.5px;line-height:1.4;display:block;margin-top:4px}
+  .metric-note{color:var(--muted);font-size:14.5px;margin-top:18px}
+
+  .ventures{margin-top:0}
+  .v-row{display:flex;align-items:center;gap:22px;padding:24px 6px;border-top:1px solid var(--line);transition:background .2s}
   .v-row:hover{background:var(--bg-soft)}
   .v-row h3 a:hover{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
   .v-row:last-child{border-bottom:1px solid var(--line)}
   .vm{width:44px;height:44px;border-radius:11px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex:none}
   .v-row h3{font-size:17px;font-weight:600}
-  .v-row p{color:var(--muted);font-size:15px}
+  .v-row p{color:var(--muted);font-size:15px;line-height:1.55;margin-top:3px}
   .v-tag{margin-left:auto;font-size:12.5px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:5px 14px;white-space:nowrap}
-
-  .record{margin-top:48px;background:var(--bg-soft);border-radius:20px;padding:44px}
-  .record .r-row{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid var(--line);font-size:15px}
-  .record .r-row:last-child{border-bottom:0}
-  .record .r-row span:first-child{color:var(--muted)}
-  .record .r-row span:last-child{font-weight:500;text-align:right}
-
-  .principles{margin-top:48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px 24px}
-  .principles div b{display:block;font-size:17px;font-weight:600;margin-bottom:6px;letter-spacing:-.01em}
-  .principles div span{color:var(--muted);font-size:15px;line-height:1.55}
-
-  .contact{text-align:center;padding:110px 0}
-  .contact h2{font-size:clamp(34px,6vw,52px)}
-  .contact p{color:var(--muted);font-size:19px;margin:16px auto 34px;max-width:520px}
-  .btn{display:inline-block;background:var(--accent);color:#fff;font-size:16px;font-weight:500;padding:14px 30px;border-radius:980px;transition:opacity .2s}
-  .btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
-  .btn.ghost:hover{opacity:1;border-color:var(--ink)}
-  .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
-  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;max-width:640px;margin:0 auto}
-  .stat{background:var(--bg-soft);border-radius:18px;padding:34px 30px;text-align:center}
-  .stat b{display:block;font-size:44px;font-weight:700;letter-spacing:-.02em}
-  .stat span{color:var(--muted);font-size:14px}
-  .metric-note{text-align:center;color:var(--muted);font-size:15px;margin-top:20px}
-  .record .r-row a:hover{text-decoration:underline;text-underline-offset:3px}
-  .btn:hover{opacity:.88}
-  .policy{margin-top:18px;font-size:13px;color:var(--muted);letter-spacing:.02em}
-
-  footer{border-top:1px solid var(--line);padding:26px 0;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-  footer a:hover{text-decoration:underline}
-  .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
   .v-tag.live{color:var(--accent);border-color:rgba(0,113,227,.45)}
-  .nav .cta{color:var(--accent);font-weight:500;border:1.5px solid rgba(0,113,227,.5);border-radius:980px;padding:7px 15px;transition:background .2s}
-  .nav .cta:hover{background:rgba(0,113,227,.08)}
-  section[id]{scroll-margin-top:72px}
-  .channels{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:44px;text-align:left}
-  .channel{background:var(--bg-soft);border-radius:18px;padding:28px 26px;transition:transform .2s}
+
+  .channels{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:44px}
+  .channel{background:var(--bg-soft);border-radius:16px;padding:26px 24px;transition:transform .2s}
   .channel:hover{transform:translateY(-2px)}
   .channel h3{font-size:17px;font-weight:600;margin-bottom:6px}
   .channel .ch-role{display:block;font-size:11.5px;font-weight:600;color:var(--accent);letter-spacing:.09em;text-transform:uppercase;margin-bottom:10px}
   .channel p{color:var(--muted);font-size:14.5px;line-height:1.55;margin-bottom:12px}
   .channel a{color:var(--accent);font-weight:500;font-size:15px}
   .channel a:hover{text-decoration:underline;text-underline-offset:3px}
+
+  .contact{text-align:left}
+  .contact .section-head{margin-bottom:0}
+  .policy{margin-top:26px;font-size:13.5px;color:var(--muted);letter-spacing:.02em}
+
+  footer{border-top:1px solid var(--line);padding:26px 0;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  footer a:hover{text-decoration:underline}
+
+  @media(max-width:900px){.nav nav{display:none}}
+  @media(max-width:860px){.profile-cols{grid-template-columns:1fr;gap:32px}}
   @media(max-width:720px){
-    .nav nav{display:none}
     .nav .cta{padding:6px 12px;font-size:13px}
+    .wrap{padding:0 20px}
+    section{padding:54px 0}
+    .hero{padding:72px 0 54px}
     .v-row{flex-wrap:wrap;gap:12px}
     .v-tag{margin:0}
-    section{padding:64px 0}
-    .hero{padding:88px 0 64px}
-    .contact{padding:72px 0}
-    .stat b{font-size:34px}
-    .stat{padding:26px 18px}
-    .cell{padding:26px 22px}
-    .record{padding:24px 20px;margin-top:32px}
-    .grid,.principles{gap:12px}
-    .channels{gap:12px}
-    .record .r-row{font-size:14px;flex-direction:column;gap:2px;padding:11px 0}
-    .record .r-row span:last-child{text-align:left}
+    .stat b{font-size:30px}
+    .stat{padding:24px 16px}
+    .cell{padding:24px 20px}
+    .record{padding:22px 18px;margin-top:32px}
+    .grid,.channels{gap:12px}
+    .grid{grid-template-columns:1fr}
+    .r-row{flex-direction:column;gap:2px;padding:11px 0;font-size:14px}
+    .r-row span:last-child{text-align:left}
+    .section-head{margin-bottom:32px}
+    .section-head p{font-size:17px}
+    .prose p{font-size:16px}
+    .facts{padding:22px 20px}
   }
 </style>
 </head>
@@ -180,6 +189,7 @@
   <div class="wrap nav">
     <a class="brand" href="#top"><span class="mono">TC</span> Tariq Chehardy&nbsp;LLC</a>
     <nav>
+      <a href="#profile">Profile</a>
       <a href="#specializations">Specializations</a>
       <a href="#ventures">Ventures</a>
       <a href="#products">Products</a>
@@ -193,22 +203,50 @@
 <div class="hero wrap" id="top">
   <div class="eyebrow">Tariq Chehardy LLC</div>
   <h1>Absolute precision.<br>Built to production.</h1>
-  <p><b>Senior expert-level software.</b> Custom code, custom scripts, commissioned programming, and reverse engineering: engineered to production standard from the first line.</p>
+  <p><b>Senior expert-level software.</b> Custom code, custom scripts, commissioned programming, and reverse engineering, engineered to production standard from the first line. A private, founder-led company: the person who scopes your work is the person who builds it.</p>
+  <div class="hero-facts"><span>Est. 2020</span><i>·</i><span>Dallas, TX</span><i>·</i><span>Founder-led</span><i>·</i><span>Public records on this site</span></div>
   <div class="hero-links">
+    <a href="#profile">The company &rsaquo;</a>
     <a href="#specializations">What we do &rsaquo;</a>
     <a href="#ventures">Ventures &rsaquo;</a>
   </div>
 </div>
 
+<section id="profile" class="wrap">
+  <div class="section-head">
+    <div class="section-eyebrow">Profile</div>
+    <h2>A private engineering company.</h2>
+    <p>One discipline, applied everywhere: software should be engineered, not assembled.</p>
+  </div>
+  <div class="profile-cols">
+    <div class="prose">
+      <p><b>Tariq Chehardy LLC</b> was founded in 2020 in California and now operates from Dallas, Texas. It is a private, founder-led company with a deliberately narrow structure: no bench, no account layer, no handoffs. The person who scopes the work is the person who builds it, and every line of code in the company carries the same standard.</p>
+      <p>The work falls into three kinds of engagement. Clients arrive with <b>systems that need to exist</b>: custom code, commissioned programming, and production tooling built to a precise specification. They arrive with <b>systems that need to be understood</b>: deep reverse engineering and program-internal analysis. And they arrive with <b>systems that need to be rebuilt properly</b>: PowerShell and internal production carried from prototype to dependable, documented reality.</p>
+      <p>The company operates in the open where it can. Products and releases are published publicly, company records are maintained on this site, and every engagement runs on written scope, fixed estimates, and direct contact with the founder. Discretion is the default for client work; transparency is the default for everything else.</p>
+    </div>
+    <div class="facts">
+      <div class="facts-title">At a glance</div>
+      <div class="r-row"><span>Founded</span><span>2020 · California</span></div>
+      <div class="r-row"><span>Headquarters</span><span>Dallas, TX</span></div>
+      <div class="r-row"><span>Structure</span><span>Private LLC · founder-led</span></div>
+      <div class="r-row"><span>Founder</span><span>Tariq Chehardy</span></div>
+      <div class="r-row"><span>Engagement model</span><span>Direct · written scope</span></div>
+      <div class="r-row"><span>Public record</span><span>This site</span></div>
+    </div>
+  </div>
+</section>
+
 <section id="metrics" class="wrap">
-  <div class="section-head" style="text-align:center;max-width:640px">
+  <div class="section-head">
     <div class="section-eyebrow">Company metrics</div>
     <h2>Live revenue.</h2>
-    <p style="color:var(--muted);font-size:19px;margin-top:14px;max-width:none">The numbers, published by the company.</p>
+    <p>The numbers, published by the company and updated as they move.</p>
   </div>
   <div class="stats">
     <div class="stat"><b>$85,000</b><span>Annual revenue · approximate</span></div>
     <div class="stat"><b>$7,083</b><span>Monthly revenue · and counting</span></div>
+    <div class="stat"><b>2020</b><span>Founded · California</span></div>
+    <div class="stat"><b>5</b><span>Active ventures · 1 live, 4 in development</span></div>
   </div>
   <p class="metric-note">Live figures. Revenue rises and falls with operating costs and infrastructure.</p>
 </section>
@@ -217,15 +255,15 @@
   <div class="section-head">
     <div class="section-eyebrow">Services</div>
     <h2>Specializations.</h2>
-    <p>Primary optimized. Every engagement ships at senior expert level: no hand-offs, no padding.</p>
+    <p>Primary optimized. Every engagement ships at senior expert level: no hand-offs, no padding, no padding of scope either.</p>
   </div>
   <div class="grid">
-    <div class="cell"><span class="no">01</span><h3>Custom Code</h3><p>Production-grade software, built to spec. Clean internals, zero shortcuts, engineered to last.</p></div>
-    <div class="cell"><span class="no">02</span><h3>Custom Scripts</h3><p>Purpose-built automation and tooling that does exactly one thing, flawlessly.</p></div>
-    <div class="cell"><span class="no">03</span><h3>Commissioned Programming</h3><p>Client-commissioned engineering, delivered end to end. Absolute precision, on the spec, on schedule.</p></div>
-    <div class="cell"><span class="no">04</span><h3>Reverse Engineering</h3><p>Deep program-internal analysis. Understanding systems from the inside out, then making them better.</p></div>
-    <div class="cell"><span class="no">05</span><h3>PowerShell &amp; Internal Production</h3><p>Windows internals and production tooling, carried from prototype stage to internal production.</p></div>
-    <div class="cell"><span class="no">06</span><h3>Design</h3><p>Modern, minimal interface and product design. Every detail deliberate, nothing decorative.</p></div>
+    <div class="cell"><span class="no">01</span><h3>Custom Code</h3><p>Production-grade software built to spec. Clean internals, zero shortcuts, engineered to last and documented on handoff.</p></div>
+    <div class="cell"><span class="no">02</span><h3>Custom Scripts</h3><p>Purpose-built automation and tooling that does exactly one thing, flawlessly. Written to be read, modified, and trusted years later.</p></div>
+    <div class="cell"><span class="no">03</span><h3>Commissioned Programming</h3><p>Client-commissioned engineering, delivered end to end. Absolute precision: on the spec, on schedule, with no handoff gaps.</p></div>
+    <div class="cell"><span class="no">04</span><h3>Reverse Engineering</h3><p>Deep program-internal analysis. Systems are understood from the inside out, then hardened or rebuilt with that knowledge.</p></div>
+    <div class="cell"><span class="no">05</span><h3>PowerShell &amp; Internal Production</h3><p>Windows internals and production tooling, carried from prototype to internal production. Hardened, repeatable, dependable.</p></div>
+    <div class="cell"><span class="no">06</span><h3>Design</h3><p>Modern, minimal interface and product design. Every detail deliberate; nothing decorative survives review.</p></div>
   </div>
 </section>
 
@@ -236,9 +274,9 @@
     <p>Four steps, no overhead. Every engagement runs the same disciplined path, from first email to final handoff.</p>
   </div>
   <div class="grid">
-    <div class="cell"><span class="no">01</span><h3>Inquiry</h3><p>Email the scope: what exists, what is needed, when it ships. No forms, no calls required.</p></div>
-    <div class="cell"><span class="no">02</span><h3>Scope</h3><p>A precise specification, a fixed estimate, and a deliverable list. Nothing moves until you approve it.</p></div>
-    <div class="cell"><span class="no">03</span><h3>Build</h3><p>Engineered to production standard from the first line. Progress stays visible throughout.</p></div>
+    <div class="cell"><span class="no">01</span><h3>Inquiry</h3><p>Email the scope: what exists, what is needed, when it ships. No forms, no calls required. Questions are answered in writing.</p></div>
+    <div class="cell"><span class="no">02</span><h3>Scope</h3><p>A precise specification, a fixed estimate, and a deliverable list. Nothing moves until you approve it, and nothing moves beyond it.</p></div>
+    <div class="cell"><span class="no">03</span><h3>Build</h3><p>Engineered to production standard from the first line. Progress stays visible throughout, with no black-box periods.</p></div>
     <div class="cell"><span class="no">04</span><h3>Delivery</h3><p>Handed over with documentation and full ownership. It works, it is documented, and it is yours.</p></div>
   </div>
 </section>
@@ -247,7 +285,7 @@
   <div class="section-head">
     <div class="section-eyebrow">Ventures</div>
     <h2>Ventures.</h2>
-    <p>Products originated, engineered, and operated in-house.</p>
+    <p>Products originated, engineered, and operated in-house. One is live; the rest are honest about where they stand.</p>
   </div>
   <div class="ventures">
     <div class="v-row">
@@ -300,7 +338,7 @@
     <div class="r-row"><span>Founder</span><span>Tariq Chehardy · born 05/15/1989 🎂</span></div>
     <div class="r-row"><span>Focus</span><span>Custom code · Commissioned programming · Reverse engineering</span></div>
     <div class="r-row"><span>Official site</span><span>Hosted on GitHub Pages</span></div>
-    <div class="r-row"><span>Official channel</span><span>github.com/tariqchehardy</span></div>
+    <div class="r-row"><span>Official channel</span><span><a href="https://github.com/tariqchehardy">github.com/tariqchehardy</a></span></div>
     <div class="r-row"><span>X / Twitter</span><span><a href="https://x.com/TariqChehardy">@TariqChehardy</a></span></div>
     <div class="r-row"><span>Email</span><span><a href="mailto:TariqChehardy@gmail.com">TariqChehardy@gmail.com</a></span></div>
     <div class="r-row"><span>Business address</span><span>4502 Gaston Ave, Apt 119, Dallas, TX 75246</span></div>
@@ -316,19 +354,21 @@
     <h2>Principles.</h2>
     <p>Four rules. No exceptions.</p>
   </div>
-  <div class="principles">
-    <div><b>Precision first</b><span>Absolute precision in every build, script, and line of code. Close enough is not.</span></div>
-    <div><b>Production, not prototypes</b><span>Internal work is carried to production standard, even at prototype stage.</span></div>
-    <div><b>Minimal by design</b><span>Modern, minimal, deliberate. Nothing ships that doesn't earn its place.</span></div>
-    <div><b>Discretion</b><span>Commissioned work stays commissioned. Client systems stay client systems.</span></div>
+  <div class="grid">
+    <div class="cell"><span class="no">Rule 01</span><h3>Precision first</h3><p>Absolute precision in every build, script, and line of code. Close enough is not, and it never ships.</p></div>
+    <div class="cell"><span class="no">Rule 02</span><h3>Production, not prototypes</h3><p>Internal work is carried to production standard, even at prototype stage. If it exists, it works.</p></div>
+    <div class="cell"><span class="no">Rule 03</span><h3>Minimal by design</h3><p>Modern, minimal, deliberate. Nothing ships that doesn't earn its place.</p></div>
+    <div class="cell"><span class="no">Rule 04</span><h3>Discretion</h3><p>Commissioned work stays commissioned. Client systems stay client systems, always.</p></div>
   </div>
 </section>
 
 <section id="contact" class="wrap">
   <div class="contact">
-    <div class="section-eyebrow">Contact</div>
-    <h2>Commercial inquiries only.</h2>
-    <p>DMs are closed everywhere. Reach the company through the right channel, first time: commissioned work, partnerships, and business start with email.</p>
+    <div class="section-head">
+      <div class="section-eyebrow">Contact</div>
+      <h2>Commercial inquiries only.</h2>
+      <p>DMs are closed everywhere. Reach the company through the right channel, first time: commissioned work, partnerships, and business start with email.</p>
+    </div>
     <div class="channels">
       <div class="channel">
         <span class="ch-role">Primary · commissioned work</span>
@@ -376,7 +416,7 @@
       var items = (data.products || []).map(function (p) {
         var initials = p.name.replace(/[^a-zA-Z]/g, "").slice(0, 2).toUpperCase() || "TC";
         var release = p.release
-          ? '<span class="v-tag">Latest: ' + escapeHtml(p.release.tag) + " &middot; " + (p.release.published || "") + "</span>"
+          ? '<span class="v-tag live">Latest: ' + escapeHtml(p.release.tag) + " &middot; " + (p.release.published || "") + "</span>"
           : '<span class="v-tag">Code &middot; updated ' + (p.pushed || "·") + "</span>";
         return '<div class="v-row">' +
           '<div class="vm">' + initials + "</div>" +
@@ -393,7 +433,7 @@
     .catch(function () {
       list.innerHTML = '<p style="color:#6e6e73;font-size:15px">Product index is updating. Refresh shortly.</p>';
     });
-  document.querySelectorAll(".section-head, .grid, .ventures, .record, .principles, .contact").forEach(function (el) { el.classList.add("reveal"); });
+  document.querySelectorAll(".section-head, .grid, .ventures, .record, .profile-cols, .channels, .prose, .contact").forEach(function (el) { el.classList.add("reveal"); });
   if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
