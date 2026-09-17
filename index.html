@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tariq Chehardy LLC · Absolute Precision</title>
+<noscript><style>.loader{display:none}</style></noscript>
 <meta name="description" content="Tariq Chehardy LLC. Senior expert-level software: custom code, custom scripts, commissioned programming, reverse engineering, PowerShell & internal production, and design. Commercial inquiries only.">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:title" content="Tariq Chehardy LLC · Absolute Precision">
@@ -12,7 +13,14 @@
 <meta property="og:url" content="https://tariqchehardy.github.io/tariq-chehardy-llc/">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='43' font-family='-apple-system,system-ui,sans-serif' font-size='26' font-weight='700' fill='%23fff' text-anchor='middle'%3ETC%3C/text%3E%3C/svg%3E">
-<style>
+.loader{position:fixed;inset:0;z-index:100;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;transition:opacity .45s ease,visibility .45s}
+  .loader.done{opacity:0;visibility:hidden}
+  .loader-mark{width:64px;height:64px;border-radius:16px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:26px}
+  .loader-bar{width:120px;height:3px;background:var(--line);border-radius:2px;overflow:hidden}
+  .loader-bar i{display:block;height:100%;width:40%;background:var(--accent);border-radius:2px;animation:loadslide 1s ease-in-out infinite}
+  @keyframes loadslide{0%{transform:translateX(-100%)}100%{transform:translateX(350%)}}
+  @media(prefers-reduced-motion:reduce){.loader-bar i{animation:none}}
+  <style>
   :root{
     --bg:#ffffff; --bg-soft:#f5f5f7; --ink:#1d1d1f; --muted:#6e6e73;
     --line:#d2d2d7; --accent:#0071e3;
@@ -99,6 +107,7 @@
 </head>
 <body>
 <a class="skip" href="#top">Skip to content</a>
+<div class="loader" aria-hidden="true"><div class="loader-mark">TC</div><div class="loader-bar"><i></i></div></div>
 
 <header>
   <div class="wrap nav">
@@ -196,7 +205,7 @@
   <div class="record">
     <div class="r-row"><span>Legal name</span><span>Tariq Chehardy LLC</span></div>
     <div class="r-row"><span>Entity type</span><span>Limited Liability Company · private, founder-led</span></div>
-    <div class="r-row"><span>Founder</span><span>Tariq Chehardy</span></div>
+    <div class="r-row"><span>Founder</span><span>Tariq Chehardy · born 05/15/1989</span></div>
     <div class="r-row"><span>Focus</span><span>Custom code · Commissioned programming · Reverse engineering</span></div>
     <div class="r-row"><span>Official site</span><span>Hosted on GitHub Pages</span></div>
     <div class="r-row"><span>Official channel</span><span>github.com/tariqchehardy</span></div>
@@ -239,6 +248,14 @@
 
 <script>
 (function () {
+  (function () {
+  var loader = document.querySelector(".loader");
+  if (!loader) return;
+  var hide = function () { loader.classList.add("done"); setTimeout(function () { if (loader.parentNode) loader.parentNode.removeChild(loader); }, 600); };
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { hide(); return; }
+  window.addEventListener("load", function () { setTimeout(hide, 350); });
+  setTimeout(hide, 2500);
+})();
   var list = document.getElementById("product-list");
   list.innerHTML = '<p style="color:#6e6e73;font-size:15px">Loading index…</p>';
   fetch("products.json", { cache: "no-store" })
