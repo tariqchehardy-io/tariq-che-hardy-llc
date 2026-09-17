@@ -3,8 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Poke — a powerful super-intelligence agent compiled into a single .skill file. Self-reliant, autonomous, with an ever-expanding toolset that learns as it grows. Ships as poke-core. Developed by Tariq Chehardy in collaboration with Privacy+ Technologies Inc.">
-<title>Poke — super-intelligence agent, compiled · Tariq Chehardy LLC</title>
+<meta name="description" content="Poke: a powerful super-intelligence agent compiled into a single .skill file. Self-reliant, autonomous, with an ever-expanding toolset that learns as it grows. Ships as poke-core. Developed by Tariq Chehardy in collaboration with Privacy+ Technologies Inc.">
+<title>Poke · the premier personal superintelligence · Tariq Chehardy LLC</title>
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="Poke · the premier personal superintelligence">
+<meta property="og:description" content="A super-intelligence agent compiled into a single .skill file. Self-reliant, autonomous, with an ever-expanding toolset that learns as it grows. Ships as poke-core.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tariqchehardy.github.io/tariq-chehardy-llc/poke.html">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Ccircle cx='19' cy='32' r='6' fill='%232997ff'/%3E%3Ctext x='40' y='42' font-family='-apple-system,system-ui,sans-serif' font-size='30' font-weight='700' fill='%23fff' text-anchor='middle'%3Ep%3C/text%3E%3C/svg%3E">
 <style>
 :root{--bg:#000;--panel:#101010;--line:#242424;--ink:#f5f5f7;--muted:#a1a1a6;--blue:#2997ff;--sans:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Segoe UI",sans-serif;--mono:"SF Mono","JetBrains Mono",ui-monospace,Menlo,monospace}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.5}a{color:inherit}.wrap{max-width:1200px;margin:auto;padding:0 24px}
@@ -23,6 +30,9 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 @media(max-width:760px){.nav-links{display:none}.hero{padding-top:110px}h1{font-size:clamp(42px,13vw,64px)}.lede{font-size:18px}.features{grid-template-columns:1fr}.status-strip{grid-template-columns:1fr 1fr}.stage{grid-template-columns:1fr;gap:8px}section{padding:80px 0}}
 @media(max-width:480px){.wrap{padding:0 18px}.status-strip{grid-template-columns:1fr}.cta-box{padding:48px 22px}.term-body{padding:18px;font-size:11px}}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .55s ease,transform .55s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -57,7 +67,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <div class="terminal" role="img" aria-label="Terminal output showing poke compiling itself from its skill file">
       <div class="term-bar">
         <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
-        <span class="term-title">poke compile — poke-core/poke.skill</span>
+        <span class="term-title">poke compile · poke-core/poke.skill</span>
       </div>
       <div class="term-body" id="termBody"></div>
     </div>
@@ -83,21 +93,21 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
         <div class="stage-tag"><span class="n">02</span> · compile</div>
         <div>
           <h3>Agent compilation</h3>
-          <p>The agent compiles into one execution graph — no interpreter overhead at runtime, no re-parsing on every step.</p>
+          <p>The agent compiles into one execution graph: no interpreter overhead at runtime, no re-parsing on every step.</p>
         </div>
       </div>
       <div class="stage">
         <div class="stage-tag"><span class="n">03</span> · bind</div>
         <div>
           <h3>API self-binding</h3>
-          <p>The runtime discovers and authenticates required API surfaces on first run, then caches the bindings — it doesn't ask twice.</p>
+          <p>The runtime discovers and authenticates required API surfaces on first run, then caches the bindings: it doesn't ask twice.</p>
         </div>
       </div>
       <div class="stage">
         <div class="stage-tag"><span class="n">04</span> · run</div>
         <div>
           <h3>Autonomous execution</h3>
-          <p>The compiled agent executes end-to-end, recovering from transient failures on its own — and learning from every run.</p>
+          <p>The compiled agent executes end-to-end, recovering from transient failures on its own, and learning from every run.</p>
         </div>
       </div>
     </div>
@@ -109,7 +119,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <div class="section-head">
       <p class="section-tag">// the package</p>
       <h2>poke-core. Two files,<br>that's the whole product.</h2>
-      <p class="section-sub"><code>poke-core.md</code> is the complete documentation. <code>poke.skill</code> is the agent itself — plain text, readable in review, diffable in git, compiled directly rather than interpreted at runtime.</p>
+      <p class="section-sub"><code>poke-core.md</code> is the complete documentation. <code>poke.skill</code> is the agent itself: plain text, readable in review, diffable in git, compiled directly rather than interpreted at runtime.</p>
     </div>
     <div class="skillfiles">
       <div class="skillfile">
@@ -165,7 +175,7 @@ collaboration with Privacy+ Technologies Inc.</pre>
       <div class="feature">
         <div class="glyph">[ api ]</div>
         <h3>API self-handling</h3>
-        <p>Discovers, authenticates, and rate-limits external APIs — no hand-written client code per integration.</p>
+        <p>Discovers, authenticates, and rate-limits external APIs: no hand-written client code per integration.</p>
       </div>
       <div class="feature">
         <div class="glyph">[ .skill ]</div>
@@ -175,7 +185,7 @@ collaboration with Privacy+ Technologies Inc.</pre>
       <div class="feature">
         <div class="glyph">[ tools ]</div>
         <h3>Ever-expanding toolset</h3>
-        <p>Its own toolset, always growing. Poke writes new tools as it encounters new problems — and keeps them.</p>
+        <p>Its own toolset, always growing. Poke writes new tools as it encounters new problems, and keeps them.</p>
       </div>
       <div class="feature">
         <div class="glyph">[ learn ]</div>
@@ -333,6 +343,18 @@ collaboration with Privacy+ Technologies Inc.</pre>
 </footer>
 
 <script>
+// Reveal on scroll
+const revealEls = document.querySelectorAll('.section-head, .pipeline, .skillfiles, .features, .status-strip, .cta-box');
+revealEls.forEach(el => el.classList.add('reveal'));
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  revealEls.forEach(el => io.observe(el));
+} else {
+  revealEls.forEach(el => el.classList.add('in'));
+}
+
 // Terminal boot sequence
 const lines = [
   { html: '<span class="k">$</span> poke compile ./poke-core/poke.skill', delay: 0 },
@@ -340,7 +362,7 @@ const lines = [
   { html: '<span class="k">→</span> toolset: 4 tools <span class="path">· self-expanding ✓</span>', delay: 1050 },
   { html: '<span class="k">→</span> learning: persistent across runs <span class="ok">✓</span>', delay: 1550 },
   { html: '<span class="k">→</span> runtime: python 3.11 <span class="ok">✓</span>', delay: 2050 },
-  { html: '<span class="ok">STATUS</span> <span class="k">·</span> poke-core v1.4.3 — live on GitHub<span class="cursor"></span>', delay: 2650 },
+  { html: '<span class="ok">STATUS</span> <span class="k">·</span> poke-core v1.4.3 · live on GitHub<span class="cursor"></span>', delay: 2650 },
 ];
 
 const body = document.getElementById('termBody');
