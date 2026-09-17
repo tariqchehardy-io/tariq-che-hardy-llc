@@ -1,4 +1,15 @@
 {
-  "generated_at": "2026-09-17T08:25:16.065674+00:00",
-  "products": []
+  "generated_at": "2026-09-17T13:04:31.896230+00:00",
+  "products": [
+    {
+      "name": "poke-core",
+      "description": "",
+      "url": "https://github.com/tariqchehardy/poke-core",
+      "language": "",
+      "stars": 0,
+      "pushed": "2026-09-17",
+      "featured": false,
+      "release": null
+    }
+  ]
 }
