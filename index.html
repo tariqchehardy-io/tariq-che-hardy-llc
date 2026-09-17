@@ -3,194 +3,181 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tariq Chehardy LLC — Digital Venture Company</title>
-<meta name="description" content="Tariq Chehardy LLC builds, launches, and scales digital ventures.">
+<title>Tariq Chehardy LLC — Absolute Precision</title>
+<meta name="description" content="Tariq Chehardy LLC. Senior expert-level software: custom code, commissioned programming, reverse engineering, and PowerShell production work. Commercial inquiries only.">
 <style>
   :root{
-    --bg:#0d0f14; --panel:#14171f; --panel-2:#191d27; --line:#262b38;
-    --text:#e8eaf0; --muted:#9aa1b2; --accent:#d4a24e; --accent-soft:rgba(212,162,78,.12);
+    --bg:#ffffff; --bg-soft:#f5f5f7; --ink:#1d1d1f; --muted:#6e6e73;
+    --line:#d2d2d7; --accent:#0071e3;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;line-height:1.6}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",system-ui,sans-serif;line-height:1.5;letter-spacing:-0.011em}
   a{color:inherit;text-decoration:none}
+  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
 
-  header{position:sticky;top:0;z-index:10;background:rgba(13,15,20,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .brand{display:flex;align-items:center;gap:12px;font-weight:600;letter-spacing:.02em}
-  .mono{width:36px;height:36px;border-radius:8px;background:var(--accent);color:#14120c;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px}
-  .brand small{display:block;font-weight:400;font-size:11px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
-  .nav a.cta{background:var(--accent);color:#14120c;padding:8px 18px;border-radius:8px;font-weight:600;font-size:14px}
-  .nav-links{display:flex;gap:24px;font-size:14px;color:var(--muted)}
-  .nav-links a:hover{color:var(--text)}
+  header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.72);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:56px;font-size:14px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:600}
+  .mono{width:28px;height:28px;border-radius:7px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;letter-spacing:.02em}
+  .nav nav{display:flex;gap:28px;color:var(--muted);font-size:13.5px}
+  .nav nav a:hover{color:var(--ink)}
+  .nav .cta{color:var(--accent);font-weight:500}
 
-  .hero{padding:96px 0 64px;text-align:center}
-  .kicker{display:inline-block;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);border:1px solid var(--line);border-radius:999px;padding:6px 16px;margin-bottom:28px}
-  h1{font-size:clamp(34px,6vw,58px);font-weight:800;letter-spacing:-.02em;line-height:1.12}
-  h1 span{color:var(--accent)}
-  .hero p.sub{max-width:640px;margin:22px auto 0;color:var(--muted);font-size:18px}
-  .hero-ctas{margin-top:36px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-  .btn{padding:12px 26px;border-radius:10px;font-weight:600;font-size:15px}
-  .btn.primary{background:var(--accent);color:#14120c}
-  .btn.ghost{border:1px solid var(--line);color:var(--text)}
-  .btn.ghost:hover{border-color:var(--accent)}
+  .hero{text-align:center;padding:120px 0 90px}
+  .hero .eyebrow{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+  h1{font-size:clamp(44px,8vw,80px);font-weight:700;letter-spacing:-.025em;line-height:1.05}
+  .hero p{color:var(--muted);font-size:clamp(19px,2.6vw,24px);letter-spacing:-.008em;max-width:640px;margin:22px auto 0;line-height:1.4}
+  .hero p b{color:var(--ink);font-weight:600}
+  .hero-links{margin-top:34px;display:flex;gap:28px;justify-content:center;font-size:17px}
+  .hero-links a{color:var(--accent)}
+  .hero-links a:hover{text-decoration:underline}
 
-  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;padding:24px 0 8px}
-  .stat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px;text-align:center}
-  .stat b{display:block;font-size:32px;font-weight:800;color:var(--accent)}
-  .stat span{font-size:13px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+  section{padding:90px 0;border-top:1px solid var(--line)}
+  h2{font-size:clamp(30px,5vw,44px);font-weight:700;letter-spacing:-.02em;line-height:1.1}
+  .section-head p{color:var(--muted);font-size:19px;margin-top:14px;max-width:560px;letter-spacing:-.005em}
 
-  section{padding:72px 0}
-  h2{font-size:clamp(24px,4vw,34px);font-weight:800;letter-spacing:-.01em;margin-bottom:10px}
-  .lede{color:var(--muted);max-width:600px;margin-bottom:40px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:48px}
+  .cell{background:var(--bg-soft);border-radius:18px;padding:34px 30px;transition:transform .2s}
+  .cell:hover{transform:translateY(-2px)}
+  .cell h3{font-size:19px;font-weight:600;margin-bottom:8px;letter-spacing:-.01em}
+  .cell p{color:var(--muted);font-size:15px;line-height:1.55}
+  .cell .no{font-size:12px;font-weight:600;color:var(--accent);letter-spacing:.1em;margin-bottom:14px;display:block}
 
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:28px;transition:border-color .2s}
-  .card:hover{border-color:var(--accent)}
-  .card .ico{width:42px;height:42px;border-radius:10px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--accent)}
-  .card h3{font-size:18px;margin-bottom:10px}
-  .card p{color:var(--muted);font-size:14.5px}
+  .ventures{margin-top:48px}
+  .v-row{display:flex;align-items:center;gap:22px;padding:26px 6px;border-top:1px solid var(--line)}
+  .v-row:last-child{border-bottom:1px solid var(--line)}
+  .vm{width:44px;height:44px;border-radius:11px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex:none}
+  .v-row h3{font-size:17px;font-weight:600}
+  .v-row p{color:var(--muted);font-size:15px}
+  .v-tag{margin-left:auto;font-size:12.5px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:5px 14px;white-space:nowrap}
 
-  .venture{display:flex;align-items:center;gap:20px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 26px;margin-bottom:14px}
-  .venture .vm{width:48px;height:48px;border-radius:12px;background:var(--panel-2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:800;font-size:18px;flex:none}
-  .venture h3{font-size:16px}
-  .venture p{color:var(--muted);font-size:14px}
-  .tag{margin-left:auto;flex:none;font-size:12px;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:4px 12px;letter-spacing:.05em}
+  .record{margin-top:48px;background:var(--bg-soft);border-radius:20px;padding:44px}
+  .record .r-row{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid var(--line);font-size:15px}
+  .record .r-row:last-child{border-bottom:0}
+  .record .r-row span:first-child{color:var(--muted)}
+  .record .r-row span:last-child{font-weight:500;text-align:right}
 
-  .principles li{list-style:none;display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--line)}
-  .principles li:last-child{border-bottom:0}
-  .principles .n{color:var(--accent);font-weight:800;font-variant-numeric:tabular-nums}
-  .principles b{display:block}
-  .principles span{color:var(--muted);font-size:14px}
+  .principles{margin-top:48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px 24px}
+  .principles div b{display:block;font-size:17px;font-weight:600;margin-bottom:6px;letter-spacing:-.01em}
+  .principles div span{color:var(--muted);font-size:15px;line-height:1.55}
 
-  .contact{text-align:center;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:56px 28px}
-  .contact h2{margin-bottom:8px}
-  .contact p{color:var(--muted);margin-bottom:28px}
-  footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-  @media(max-width:720px){.nav-links{display:none}.venture{flex-wrap:wrap}.tag{margin:0}}
+  .contact{text-align:center;padding:110px 0}
+  .contact h2{font-size:clamp(34px,6vw,52px)}
+  .contact p{color:var(--muted);font-size:19px;margin:16px auto 34px;max-width:520px}
+  .btn{display:inline-block;background:var(--accent);color:#fff;font-size:16px;font-weight:500;padding:14px 30px;border-radius:980px;transition:opacity .2s}
+  .btn:hover{opacity:.88}
+  .policy{margin-top:18px;font-size:13px;color:var(--muted);letter-spacing:.02em}
+
+  footer{border-top:1px solid var(--line);padding:26px 0;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  @media(max-width:720px){.nav nav{display:none}.v-row{flex-wrap:wrap}.v-tag{margin:0}}
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap nav">
-    <div class="brand">
-      <div class="mono">TC</div>
-      <div>Tariq Chehardy LLC<small>Digital Venture Company</small></div>
-    </div>
-    <nav class="nav-links">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
+    <a class="brand" href="#top"><span class="mono">TC</span> Tariq Chehardy&nbsp;LLC</a>
+    <nav>
+      <a href="#specializations">Specializations</a>
       <a href="#ventures">Ventures</a>
+      <a href="#record">Record</a>
       <a href="#principles">Principles</a>
     </nav>
-    <a class="cta" href="#contact">Get in touch</a>
+    <a class="cta" href="#contact">Inquiries</a>
   </div>
 </header>
 
-<div class="hero wrap">
-  <div class="kicker">Digital Venture Company</div>
-  <h1>We build, launch, and scale<br><span>digital ventures.</span></h1>
-  <p class="sub">Tariq Chehardy LLC is an independent venture company that turns strong ideas into shipped products — from first prototype to operating business.</p>
-  <div class="hero-ctas">
-    <a class="btn primary" href="#ventures">Explore ventures</a>
-    <a class="btn ghost" href="#contact">Work with us</a>
+<div class="hero wrap" id="top">
+  <div class="eyebrow">Tariq Chehardy LLC</div>
+  <h1>Absolute precision.<br>Built to production.</h1>
+  <p><b>Senior expert-level software.</b> Custom code, custom scripts, commissioned programming, and reverse engineering — engineered to production standard from the first line.</p>
+  <div class="hero-links">
+    <a href="#specializations">What we do &rsaquo;</a>
+    <a href="#ventures">Ventures &rsaquo;</a>
   </div>
 </div>
 
-<div class="wrap">
-  <div class="stats">
-    <div class="stat"><b>12+</b><span>Ventures launched</span></div>
-    <div class="stat"><b>6</b><span>Markets served</span></div>
-    <div class="stat"><b>90 days</b><span>Idea to first release</span></div>
-    <div class="stat"><b>100%</b><span>Independently funded</span></div>
+<section id="specializations" class="wrap">
+  <div class="section-head">
+    <h2>Specializations.</h2>
+    <p>Primary optimized. Every engagement ships at senior expert level — no hand-offs, no padding.</p>
   </div>
-</div>
-
-<section id="about" class="wrap">
-  <h2>About the company</h2>
-  <p class="lede">A focused studio-at-heart with an operator's mindset — we only build what we would run ourselves.</p>
-  <div class="cards">
-    <div class="card">
-      <h3>Who we are</h3>
-      <p>Tariq Chehardy LLC is a digital venture company founded on one conviction: great software ventures come from small, senior, shipping teams with real ownership — not committees.</p>
-    </div>
-    <div class="card">
-      <h3>What we do</h3>
-      <p>We originate, build, and operate digital products end to end — identifying opportunities, shipping production-grade software, and scaling what works.</p>
-    </div>
-    <div class="card">
-      <h3>How we work</h3>
-      <p>Lean teams, short cycles, production from day one. Every venture earns its keep with real users and real revenue, or it gets retired quickly.</p>
-    </div>
-  </div>
-</section>
-
-<section id="services" class="wrap">
-  <h2>Services</h2>
-  <p class="lede">Three ways we create value — for our own ventures and for select partners.</p>
-  <div class="cards">
-    <div class="card">
-      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
-      <h3>Venture Building</h3>
-      <p>From validated concept to operating product: strategy, brand, build, launch, and iteration under one roof.</p>
-    </div>
-    <div class="card">
-      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
-      <h3>Product &amp; Engineering Studio</h3>
-      <p>Production-grade web and mobile software, automation platforms, and cloud infrastructure for partner ventures.</p>
-    </div>
-    <div class="card">
-      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v6h-6"/></svg></div>
-      <h3>Growth &amp; Scale</h3>
-      <p>Distribution, analytics, and operational systems that take a working product and make it a working business.</p>
-    </div>
+  <div class="grid">
+    <div class="cell"><span class="no">01</span><h3>Custom Code</h3><p>Production-grade software, built to spec. Clean internals, zero shortcuts, engineered to last.</p></div>
+    <div class="cell"><span class="no">02</span><h3>Custom Scripts</h3><p>Purpose-built automation and tooling that does exactly one thing — flawlessly.</p></div>
+    <div class="cell"><span class="no">03</span><h3>Commissioned Programming</h3><p>Client-commissioned engineering, delivered end to end. Absolute precision, on the spec, on schedule.</p></div>
+    <div class="cell"><span class="no">04</span><h3>Reverse Engineering</h3><p>Deep program-internal analysis. Understanding systems from the inside out — then making them better.</p></div>
+    <div class="cell"><span class="no">05</span><h3>PowerShell &amp; Internal Production</h3><p>Windows internals and production tooling, carried from prototype stage to internal production.</p></div>
+    <div class="cell"><span class="no">06</span><h3>Design</h3><p>Modern, minimal interface and product design. Every detail deliberate, nothing decorative.</p></div>
   </div>
 </section>
 
 <section id="ventures" class="wrap">
-  <h2>Selected ventures</h2>
-  <p class="lede">Products we've originated, built, and operate today.</p>
-  <div class="venture">
-    <div class="vm">SW</div>
-    <div><h3>Sovereign Workstation</h3><p>Ephemeral, hardened cloud workstations — a fully provisioned private desktop in minutes, gone when you're done.</p></div>
-    <div class="tag">Infrastructure</div>
+  <div class="section-head">
+    <h2>Ventures.</h2>
+    <p>Products originated, engineered, and operated in-house.</p>
   </div>
-  <div class="venture">
-    <div class="vm">PP</div>
-    <div><h3>PrivacyKit</h3><p>Privacy-first tooling and browsers configured for people who take their digital footprint seriously.</p></div>
-    <div class="tag">Privacy</div>
+  <div class="ventures">
+    <div class="v-row">
+      <div class="vm">SW</div>
+      <div><h3>Sovereign Workstation</h3><p>Ephemeral, hardened cloud workstations — fully provisioned in minutes, gone when you're done.</p></div>
+      <div class="v-tag">Infrastructure</div>
+    </div>
+    <div class="v-row">
+      <div class="vm">PK</div>
+      <div><h3>PrivacyKit</h3><p>Privacy-first tooling, configured for people who take their digital footprint seriously.</p></div>
+      <div class="v-tag">Privacy</div>
+    </div>
+    <div class="v-row">
+      <div class="vm">VA</div>
+      <div><h3>Vantage Analytics</h3><p>Lightweight analytics for small digital businesses. Signal, without the surveillance stack.</p></div>
+      <div class="v-tag">Software</div>
+    </div>
   </div>
-  <div class="venture">
-    <div class="vm">VA</div>
-    <div><h3>Vantage Analytics</h3><p>Lightweight analytics for small digital businesses — signal without the surveillance stack.</p></div>
-    <div class="tag">SaaS</div>
+</section>
+
+<section id="record" class="wrap">
+  <div class="section-head">
+    <h2>Official record.</h2>
+    <p>This site is the official public record of Tariq Chehardy LLC — company and personal public records, published and hosted right here.</p>
+  </div>
+  <div class="record">
+    <div class="r-row"><span>Legal name</span><span>Tariq Chehardy LLC</span></div>
+    <div class="r-row"><span>Entity type</span><span>Limited Liability Company — private, founder-led</span></div>
+    <div class="r-row"><span>Founder</span><span>Tariq Chehardy</span></div>
+    <div class="r-row"><span>Focus</span><span>Custom code · Commissioned programming · Reverse engineering</span></div>
+    <div class="r-row"><span>Official site</span><span>Hosted on GitHub Pages</span></div>
+    <div class="r-row"><span>Official channel</span><span>github.com/tariqchehardy</span></div>
+    <div class="r-row"><span>Status</span><span>Active</span></div>
   </div>
 </section>
 
 <section id="principles" class="wrap">
-  <h2>Operating principles</h2>
-  <p class="lede">The rules every venture under this company runs by.</p>
-  <ul class="principles">
-    <li><span class="n">01</span><div><b>Ship early, ship real</b><span>Production from day one — a live imperfect product beats a perfect roadmap.</span></div></li>
-    <li><span class="n">02</span><div><b>Own the whole stack</b><span>From infrastructure to interface, we build and run what we ship.</span></div></li>
-    <li><span class="n">03</span><div><b>Privacy is a feature</b><span>Every product respects its users' data as a hard requirement, not a compliance task.</span></div></li>
-    <li><span class="n">04</span><div><b>Cost discipline</b><span>Lean by design — every venture runs on sustainable economics from its first release.</span></div></li>
-  </ul>
+  <div class="section-head">
+    <h2>Principles.</h2>
+    <p>Four rules. No exceptions.</p>
+  </div>
+  <div class="principles">
+    <div><b>Precision first</b><span>Absolute precision in every build, script, and line of code. Close enough is not.</span></div>
+    <div><b>Production, not prototypes</b><span>Internal work is carried to production standard — even at prototype stage.</span></div>
+    <div><b>Minimal by design</b><span>Modern, minimal, deliberate. Nothing ships that doesn't earn its place.</span></div>
+    <div><b>Discretion</b><span>Commissioned work stays commissioned. Client systems stay client systems.</span></div>
+  </div>
 </section>
 
 <section id="contact" class="wrap">
   <div class="contact">
-    <h2>Let's build something</h2>
-    <p>Partnerships, venture ideas, or product work — we read everything.</p>
-    <a class="btn primary" href="https://github.com/tariqchehardy" >Reach out on GitHub</a>
+    <h2>Commercial inquiries only.</h2>
+    <p>DMs are closed. For commissioned work, partnerships, and business — reach us on GitHub.</p>
+    <a class="btn" href="https://github.com/tariqchehardy">Contact on GitHub</a>
+    <p class="policy">Tariq Chehardy LLC does not accept unsolicited direct messages.</p>
   </div>
 </section>
 
 <footer class="wrap">
-  <div>© 2026 Tariq Chehardy LLC · Digital Venture Company</div>
-  <div><a href="https://github.com/tariqchehardy">github.com/tariqchehardy</a></div>
+  <div>© 2026 Tariq Chehardy LLC. All rights reserved.</div>
+  <div>Official site · Hosted on GitHub Pages</div>
 </footer>
 
 </body>
