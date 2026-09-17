@@ -24,7 +24,15 @@ The **official site** of Tariq Chehardy LLC — senior expert-level software: cu
 
 ## Contact
 
-**Commercial inquiries only. DMs are closed.** Reach us on GitHub: [@tariqchehardy](https://github.com/tariqchehardy)
+**Commercial inquiries only. DMs are closed.**
+
+- **Email:** [TariqChehardy@gmail.com](mailto:TariqChehardy@gmail.com)
+- **GitHub:** [@tariqchehardy](https://github.com/tariqchehardy)
+
+**Company record**
+
+- **Business address:** 4502 Gaston Ave, Apt 119, Dallas, TX 75246
+- **Live revenue:** ~$85,000 annually · $7,083 monthly, fluctuating with operating costs and infrastructure
 
 ---
 
