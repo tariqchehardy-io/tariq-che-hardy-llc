@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://tariqchehardy.github.io/tariq-chehardy-llc/sitemap.xml
+Sitemap: https://tariqchehardy-io.github.io/tariq-chehardy-llc/sitemap.xml

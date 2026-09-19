@@ -13,7 +13,7 @@ import os
 import sys
 import urllib.request
 
-OWNER = os.environ.get("GITHUB_REPOSITORY_OWNER", "tariqchehardy")
+OWNER = os.environ.get("GITHUB_REPOSITORY_OWNER", "tariqchehardy-io")
 API = "https://api.github.com"
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 HDRS = {

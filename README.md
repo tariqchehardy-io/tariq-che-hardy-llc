@@ -2,7 +2,7 @@
 
 The **official site** of Tariq Chehardy LLC — senior expert-level software: custom code, custom scripts, commissioned programming, reverse engineering, PowerShell & internal production work, and design.
 
-**Live:** https://tariqchehardy.github.io/tariq-chehardy-llc/
+**Live:** https://tariqchehardy-io.github.io/tariq-chehardy-llc/
 
 ## Specializations
 
@@ -27,7 +27,7 @@ The **official site** of Tariq Chehardy LLC — senior expert-level software: cu
 **Commercial inquiries only. DMs are closed.**
 
 - **Email:** [TariqChehardy@gmail.com](mailto:TariqChehardy@gmail.com)
-- **GitHub:** [@tariqchehardy](https://github.com/tariqchehardy)
+- **GitHub:** [@tariqchehardy-io](https://github.com/tariqchehardy-io)
 
 **Company record**
 
