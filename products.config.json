@@ -1,7 +1,8 @@
 {
+  "owners": ["tariqchehardyllc", "pokedot-ai"],
   "ignore": [
-    "tariqchehardy-io",
-    "tariq-chehardy-llc"
+    "tariqchehardyllc.github.io",
+    "pokedot-ai.github.io"
   ],
   "featured": [
     "poke-core"
