@@ -1,4 +1,9 @@
 {
-  "ignore": ["tariqchehardy-io", "tariq-chehardy-llc"],
-  "featured": ["sovereign-workstation"]
+  "ignore": [
+    "tariqchehardy-io",
+    "tariq-chehardy-llc"
+  ],
+  "featured": [
+    "poke-core"
+  ]
 }

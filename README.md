@@ -18,7 +18,6 @@ The **official site** of Tariq Chehardy LLC — senior expert-level software: cu
 ## Ventures
 
 - **[Poke](poke.html)** — a super-intelligence agent compiled into a single .skill file, shipped as poke-core. Developed in collaboration with Privacy+ Technologies Inc.
-- **Sovereign Workstation** — ephemeral, hardened cloud workstations
 - **PrivacyKit** — privacy-first tooling
 - **Vantage Analytics** — lightweight analytics for small businesses
 
